@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CR7qiusu 管理后台</title>
+
+<style>
+body{
+    background:#0b0b0b;
+    color:white;
+    font-family:Arial;
+    padding:20px;
+}
+
+.box{
+    max-width:500px;
+    margin:auto;
+    background:#181818;
+    padding:25px;
+    border-radius:15px;
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+button{
+    background:#d4af37;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>🔐 CR7qiusu 管理后台</h1>
+
+<h3>管理员登录</h3>
+
+<input id="password" placeholder="输入管理员密码">
+
+<button onclick="login()">
+登录
+</button>
+
+
+<div id="upload" style="display:none">
+
+<h2>上传视频</h2>
+
+<input type="file" accept="video/*">
+
+<input placeholder="视频标题">
+
+<textarea placeholder="视频简介"></textarea>
+
+<button>
+发布视频
+</button>
+
+</div>
+
+
+</div>
+
+
+<script>
+
+function login(){
+
+let p=document.getElementById("password").value;
+
+if(p=="CR7admin"){
+
+document.getElementById("upload").style.display="block";
+
+alert("登录成功");
+
+}
+
+else{
+
+alert("密码错误");
+
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
