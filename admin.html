@@ -64,15 +64,17 @@ button{
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
-
 const CLOUD_NAME="kkkyei3p";
 const UPLOAD_PRESET="CR7qiusu";
 
 const SUPABASE_URL="https://beniovhhwttbemmigoyz.supabase.co";
 
 const SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJlbmlvdmhod3R0YmVtbWlnb3l6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxNjIyNDUsImV4cCI6MjEwMTczODI0NX0.dw7Na2xWyFcVpPf_R4efj0phsQU2oEFGNyn9cj3Bz7M";
+
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 
 function login(){
