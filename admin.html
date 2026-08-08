@@ -128,10 +128,30 @@ body:data
 
 .then(res=>res.json())
 
-.then(result=>{
+.then(async result=>{
+
+let videoUrl = result.secure_url;
+
+const { data, error } = await supabase
+.from("videos")
+.insert([
+{
+title: "CR7视频",
+url: videoUrl
+}
+]);
+
+if(error){
+
+console.log(error);
+alert("保存数据库失败");
+
+}else{
 
 document.getElementById("result").innerHTML=
-"上传成功:<br>"+result.secure_url;
+"上传成功:<br>"+videoUrl;
+
+}
 
 })
 
